@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BEFORE PATHWAYS</title>
+  <meta name="description" content="She wasn't radicalised. She was educated. A satirical interactive narrative.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="monitor" role="main" aria-label="Before Pathways — interactive narrative">
+
+    <div id="bezel">
+      <div id="screen">
+
+        <!-- Background layer -->
+        <div id="scene-bg" aria-hidden="true"></div>
+
+        <!-- Character layer -->
+        <img id="char" class="hidden" src="" alt="" aria-hidden="true">
+
+        <!-- CCTV overlay -->
+        <div id="cctv" aria-hidden="true">
+          <div id="cctv-left"><span id="cctv-dot"></span> REC</div>
+          <div id="cctv-right"></div>
+        </div>
+
+        <!-- Meter toast -->
+        <div id="meter-toast" role="status" aria-live="polite" aria-label="Compliance meters">
+          <div class="mt-item">
+            <span class="mt-lbl">C</span>
+            <div class="mt-bar"><div class="mt-fill compliance" id="mt-c" style="width:50%"></div></div>
+            <span class="mt-val" id="mtv-c">50</span>
+          </div>
+          <div class="mt-item">
+            <span class="mt-lbl">T</span>
+            <div class="mt-bar"><div class="mt-fill trust" id="mt-t" style="width:85%"></div></div>
+            <span class="mt-val" id="mtv-t">85</span>
+          </div>
+          <div class="mt-item">
+            <span class="mt-lbl">E</span>
+            <div class="mt-bar"><div class="mt-fill exhaustion" id="mt-e" style="width:10%"></div></div>
+            <span class="mt-val" id="mtv-e">10</span>
+          </div>
+        </div>
+
+        <!-- Audio controls -->
+        <div id="audio-controls">
+          <button id="btn-sound" class="audio-btn" aria-label="Toggle sound">&#128266; SOUND</button>
+          <button id="btn-voice" class="audio-btn" aria-label="Toggle voice narration">&#127908; VOICE</button>
+        </div>
+
+        <!-- Loading screen -->
+        <div id="loading">
+          <div class="loading-text">LOADING...</div>
+          <div class="loading-bar"><div class="loading-fill"></div></div>
+        </div>
+
+      </div><!-- #screen -->
+    </div><!-- #bezel -->
+
+    <!-- Textbox (below monitor bezel) -->
+    <div id="textbox" role="region" aria-live="polite" aria-label="Dialogue"></div>
+
+    <!-- Decorative gamepad -->
+    <div id="gamepad" aria-hidden="true"></div>
+    <div id="gamepad-cord" aria-hidden="true"></div>
+
+  </div><!-- #monitor -->
+
+  <script src="scene-data.js"></script>
+  <script src="game-engine.js"></script>
+
+</body>
+</html>
